@@ -6,6 +6,7 @@ import android.content.Context;
 
 import com.androidpopcorn.tenx.daggersubcomponentstest.data.ApiService;
 import com.androidpopcorn.tenx.daggersubcomponentstest.di.scopes.ApplicationContext;
+import com.androidpopcorn.tenx.daggersubcomponentstest.ui.main.MainComponent;
 
 import javax.inject.Singleton;
 
@@ -13,7 +14,7 @@ import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 
-@Module
+@Module(subcomponents = MainComponent.class)
 public abstract class AppModule {
 
 

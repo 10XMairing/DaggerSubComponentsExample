@@ -11,11 +11,13 @@ import javax.inject.Inject;
 
 public class BaseApplication extends Application {
 
-    AppComponent appComponent;
+    private AppComponent appComponent;
 
 
     @Inject
     ApiService apiService;
+
+
 
 
     @Override
@@ -29,10 +31,14 @@ public class BaseApplication extends Application {
         if(apiService == null){
             Log.d("TEST", "onCreate: NULL");;
         }else {
-            Log.d("TEST", "onCreate: ");
+            Log.d("TEST", "onCreate: not null ");
         }
 
 
 
+    }
+
+    public AppComponent getAppComponent() {
+        return appComponent;
     }
 }
