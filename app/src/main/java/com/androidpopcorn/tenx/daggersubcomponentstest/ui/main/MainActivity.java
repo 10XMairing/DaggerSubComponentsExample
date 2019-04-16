@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     ApiService apiService;
 
+    @Inject
+    MainViewModel viewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         ((BaseApplication) getApplication()).getAppComponent().mainBuilder().activity(this).build().inject(this);
 
-
-        if(apiService == null){
+        if(viewModel == null){
             Log.d("TEST", "onCreate: main: null");
         }else {
             Log.d("TEST", "onCreate: main: NOT null");

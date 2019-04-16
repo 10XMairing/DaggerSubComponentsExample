@@ -40,4 +40,8 @@ dependencies {
     implementation 'com.google.dagger:dagger:2.19'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.19'
 
+//    lifecycle
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
+
 }
