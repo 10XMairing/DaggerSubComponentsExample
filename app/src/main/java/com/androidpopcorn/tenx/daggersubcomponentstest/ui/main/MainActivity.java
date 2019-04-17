@@ -32,5 +32,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("TEST", "onCreate: main: NOT null");
         }
 
+        viewModel.loadData();
+
     }
 }
